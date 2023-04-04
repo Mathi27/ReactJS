@@ -2,8 +2,10 @@
   "name": "ignitingapp",
   "version": "1.0.0",
   "description": "This is learning project",
-  "main": "app.js",
+ 
   "scripts": {
+     "start":"parcel index.html",
+     "build":"parcel build index.html",
     "test": "jest"
   },
   "repository": {
