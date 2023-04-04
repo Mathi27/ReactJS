@@ -1,0 +1,25 @@
+{
+  "name": "ignitingapp",
+  "version": "1.0.0",
+  "description": "This is learning project",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mathi27/ReactJS.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Mathi Yuvarajan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mathi27/ReactJS/issues"
+  },
+  "homepage": "https://github.com/Mathi27/ReactJS#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
