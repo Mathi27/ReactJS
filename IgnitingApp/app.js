@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM  from 'react-dom/client';
+
 const secondtree = React.createElement("div",{id:"parent"},[
     React.createElement("div",{id:"child"},
     [
@@ -6,7 +9,7 @@ const secondtree = React.createElement("div",{id:"parent"},[
     ]),
     React.createElement("div",{id:"child2"},
     [
-        React.createElement("h1",{},"I am a H1 Tag"),
+        React.createElement("h1",{},"Hello React Js"),
         React.createElement("h2",{},"I am a H2 Tag"),
     ]),
 ]);
