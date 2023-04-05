@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    /* background-color: rebeccapurple; */
+    width: 14rem;
+    justify-content: space-between;
+    font-family: Montserrat;
+}
+.logo{
+    height: 60px;
+    width: 60px;
+}
+.header{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+    color: white;
+}
+.nav-items > ul{
+  display: flex;
+  
+  list-style-type: none;
+  font-family: Montserrat;
+}
+
+.nav-items > ul > li{
+    padding: 10px;
+    margin: 10px;
+  }
+.Restro-card{
+    width: 200px;
+    padding: 5px;
+    height: 300px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ffeed3;
+}
+.hub{
+    color: #aa5f7b;
+}
+.Restro-card:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.body{
+    margin: 1rem;
+}
+.res-logo{
+    /* height: 100%; */
+    width: 100%;
+ 
+}
+.restro-containers{
+    display: flex;
+    justify-content: space-around  ;
+    flex-wrap: wrap;
+    margin: 1rem;
+    gap: 1.2rem;
+}
