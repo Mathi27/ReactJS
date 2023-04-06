@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
 }
 .logo-container{
     display: flex;
@@ -38,7 +37,8 @@
   }
 .Restro-card{
     width: 200px;
-    padding: 5px;
+    height: 100%;
+    padding:  10px;
     height: 300px;
   
     display: flex;
@@ -59,6 +59,7 @@
 .res-logo{
     /* height: 100%; */
     width: 100%;
+    height: 120px;
  
 }
 .restro-containers{
@@ -67,4 +68,14 @@
     flex-wrap: wrap;
     margin: 1rem;
     gap: 1.2rem;
+}
+.filter-btn{
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: #aa5f7b;
+}
+.filter-btn:hover{
+    background-color: #ac7086;
+    border-color: black;
 }

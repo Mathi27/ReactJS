@@ -1,41 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
- 
-const Header = () => {
-    return (
-        <div className='header'>
-            <div className='logo-container'>
-                <img className='logo' src='https://cdn.pixabay.com/photo/2017/02/17/17/33/food-2074638_960_720.png'/>
-                <h1>Food<span className='hub'>Hub</span></h1>
-            </div>
-
-            <div className='nav-items'>
-               <ul>
-                  <li>Home</li>
-                  <li>About Us</li>
-                  <li>Contact Us</li>
-                  <li>Cart</li>
-               </ul>
-            </div>
-        </div>
-    )
-}
- 
-const RestroCard = (props) => {
-     const {resData}=props;
-     // Destructue the code
-     const {name,cuisines,totalRatings,area} = resData?.data;
-    return (
-         <div className='Restro-card'>
-         <img className="res-logo" alt='res-image' src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/"+resData.data.cloudinaryImageId} />
-         <h3>{name}</h3>
-         <h4>{cuisines.join(" , ")}</h4>
-         <h4>{totalRatings}</h4>
-         <h4>{ area}</h4>
-         </div>
-     );
-}
-const resList = [
+const MockData = [
     {
       "type": "restaurant",
       "data": {
@@ -188,7 +151,7 @@ const resList = [
           "iconType": "EMPTY"
         },
         "promoted": true,
-        "avgRating": "4.0",
+        "avgRating": "2.0",
         "totalRatings": 10000,
         "new": false
       },
@@ -339,7 +302,7 @@ const resList = [
           "iconType": "EMPTY"
         },
         "promoted": false,
-        "avgRating": "4.4",
+        "avgRating": "3.4",
         "totalRatings": 10000,
         "new": false
       },
@@ -1410,7 +1373,7 @@ const resList = [
           "iconType": "EMPTY"
         },
         "promoted": true,
-        "avgRating": "4.1",
+        "avgRating": "2.1",
         "totalRatings": 10000,
         "new": false
       },
@@ -2284,32 +2247,5 @@ const resList = [
       },
       "subtype": "basic"
     }
-  ]
-const Body = () =>{
-    return (
-       <div className='body'>
-        <div className='search-bar'>Search</div>
-        <div className='restro-containers'>
-           {/* <RestroCard
-           resData = {resList[2]}
-           /> */}
-           {resList.map(restaurant => <RestroCard key={restaurant.data.id} resData = {restaurant}/>)}
-            
-            
-        </div>
-       </div>
-    );
-}
-
-const AppLayout = () =>{
-    return (
-        <div className='app'>
-            <Header/>
-            <Body/>
-        </div>
-    )
-}
-
-const reactElement = React.createElement(AppLayout);
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(reactElement);
+]
+export default MockData;
