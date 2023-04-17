@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+ 
 }
 .logo-container{
     display: flex;
@@ -40,11 +41,11 @@
     height: 100%;
     padding:  10px;
     height: 300px;
-  
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: #ffeed3;
+    background-color: #FFEED3;
 }
 .hub{
     color: #aa5f7b;
@@ -67,6 +68,7 @@
     justify-content: space-around  ;
     flex-wrap: wrap;
     margin: 1rem;
+    border-radius: 10px;
     gap: 1.2rem;
 }
 .filter-btn{

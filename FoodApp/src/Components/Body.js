@@ -1,5 +1,4 @@
 import RestroCard from "./RestroCard";
-import MockData from "../utils/MockData";
 import { useEffect, useState } from 'react'; 
 import axios from "axios";
 import Shrimmer from "./Shrimmer";
