@@ -3,7 +3,10 @@ import { useEffect, useState } from 'react';
 import axios from "axios";
 import Shrimmer from "./Shrimmer";
 const Body = () =>{
+   // avoid rendering a component
+
   const [listOfrestaurant,setrestaurant]=useState(undefined);
+  const [filteredRestaurant,setfilteredRestaurant] = useState([]);
     console.log("render")
   useEffect( () => {
     getSwiggyDetails();
@@ -21,9 +24,13 @@ const Body = () =>{
         let cardmap = CardData.map(elements =>  elements.data)
         //  console.log(cardmap);
         setrestaurant(cardmap);
-       
   
  }
+ //early return | don't render component
+//  if(!listOfrestaurant) return <h1>Empty</h1>;
+ 
+ 
+
     return  (
        <div className='body'>
       <div className='filter'>
@@ -44,8 +51,6 @@ const Body = () =>{
           return <Shrimmer key={val} />
         }):listOfrestaurant.map(restaurant => <RestroCard key={restaurant.data.id} resData = {restaurant}/>) }  
  
-            
-            
         </div>
        </div>
     );
