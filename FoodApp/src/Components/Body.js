@@ -21,10 +21,10 @@ const Body = () =>{
  async function getSwiggyDetails(){
         // Api Call from Swiggy Public Endpoint  
         const datafromApi=await axios.get("https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.0053713&lng=76.9646033&offset=15&sortBy=RELEVANCE&pageType=SEE_ALL&page_type=DESKTOP_SEE_ALL_LISTING")
- 
+        
         let CardData = datafromApi?.data?.data.cards;
         let cardmap = CardData.map(elements =>  elements.data)
-        //  console.log(cardmap);
+         console.log(cardmap);
         setrestaurant(cardmap);
  }
 

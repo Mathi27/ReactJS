@@ -10,6 +10,8 @@ import Home from './Components/Home';
 import Contact from './Components/Contact';
 import Cart from './Components/Cart';
 import ResMenu from './Components/RestaurantMenu';
+import Profile from './Components/Profile';
+import ProfileComponent from './Components/ProfileClass';
 const AppLayout = () =>{
     return (
         <div className='app'>
@@ -27,11 +29,16 @@ const appRoute = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element: <Body/>
+                element: <Body/>,
             },
             {
                 path:'/about',
-                element: <About/>
+                element: <About/>,
+                children:[{
+                    path:'profile',
+                    element:<Profile/>
+                },
+               ]
             },
             {
                 path:'/home',
@@ -49,6 +56,11 @@ const appRoute = createBrowserRouter([
                 path:'/resdetail/:id',
                 element: <ResMenu/>
             },
+            {
+                path:'/profilecp',
+                element:<ProfileComponent/>
+            }
+           
         ]
     },
    

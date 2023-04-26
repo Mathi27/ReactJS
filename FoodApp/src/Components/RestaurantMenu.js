@@ -10,6 +10,7 @@ const ResMenu = () =>{
     console.log(paramss)
     const {id} = paramss;
     const [resdetail,setResDetail] = useState(null);
+
     useEffect(()=>{
          getRestaurantInfo();
     },[]);
@@ -18,7 +19,7 @@ const ResMenu = () =>{
         const data = await axios.get('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=23.022505&lng=72.5713621&restaurantId='+id);
         console.log(data);
         const HotelDetails = data?.data?.data?.cards[0]?.card?.card?.info;
-         setResDetail(HotelDetails);        
+        setResDetail(HotelDetails);        
     } 
  
    
@@ -32,7 +33,6 @@ const ResMenu = () =>{
              <p>{resdetail.costForTwoMessage}</p>
         
         </div>
-       
-    )
+    );
 }
 export default ResMenu;
