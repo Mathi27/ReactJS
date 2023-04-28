@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './Components/Header';
 import Body from './Components/Body';
@@ -12,6 +12,8 @@ import Cart from './Components/Cart';
 import ResMenu from './Components/RestaurantMenu';
 import Profile from './Components/Profile';
 import ProfileComponent from './Components/ProfileClass';
+import SampleUi from './Components/Abo';
+import Homepage from './Components/HomePage/HomePage';
 const AppLayout = () =>{
     return (
         <div className='app'>
@@ -21,18 +23,20 @@ const AppLayout = () =>{
         </div>
     )
 }
+
 const appRoute = createBrowserRouter([
     {
         path:'/',
         element:<AppLayout/>,
-        errorElement:<FallBack/>,
+        
         children:[
             {
                 path:'/',
                 element: <Body/>,
             },
             {
-                path:'/about',
+                path:'/about', 
+                
                 element: <About/>,
                 children:[{
                     path:'profile',
@@ -59,6 +63,11 @@ const appRoute = createBrowserRouter([
             {
                 path:'/profilecp',
                 element:<ProfileComponent/>
+            },
+        
+            {
+                path:'/Homepage',
+                element:<Homepage/>
             }
            
         ]

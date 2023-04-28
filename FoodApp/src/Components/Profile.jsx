@@ -8,7 +8,7 @@ const Profile = (props) =>{
             <h3>Count Functional Component:{count}</h3>
             <button onClick={()=>{
                 setCount(count+1);
-            }}>amuku </button>
+            }}>press </button>
 
             <h3>name:{props.name}</h3>
         </div>

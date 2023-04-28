@@ -25,7 +25,7 @@ class ProfileComponent extends React.Component{
             <button onClick={()=>{
                 this.setState({
                    count:+1,
-                })
+                }) 
             }}>Click me</button>
             <h4>This is the class component of the profile</h4>
             </React.Fragment>
