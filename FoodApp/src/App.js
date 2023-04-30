@@ -28,6 +28,7 @@ const appRoute = createBrowserRouter([
     {
         path:'/',
         element:<AppLayout/>,
+        errorElement:<FallBack/>,
         
         children:[
             {

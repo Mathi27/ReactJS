@@ -7,8 +7,10 @@ const FallBack = ()=>{
      <div>
          <h1>This is the fall back User Interface</h1>
         <p>OOPS .... try again</p>
-        <h2>{err.status} : {err.statusText}</h2>
+        <h2>This is a {err.status}:{err.statusText} Error</h2>
+        <p>{err.s}</p>
         <p>{err.data}</p>
+         
         <p>Go back to <a href="/">Home</a></p>
      </div>
    ) 

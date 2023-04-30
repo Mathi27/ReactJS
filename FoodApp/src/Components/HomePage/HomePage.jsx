@@ -1,10 +1,11 @@
 import React from 'react';
+import Style from './HomePage.module.css'
 
 const Homepage = () => {
     return (
             <>
-                <div className='parent'>
-                   <div className='child'>
+                <div className={Style.parent}>
+                   <div className={Style.child}>
                        
                    </div>
                 </div>
