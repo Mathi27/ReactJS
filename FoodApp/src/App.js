@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { lazy, useEffect ,Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './Components/Header';
 import Body from './Components/Body';
@@ -12,8 +12,14 @@ import Cart from './Components/Cart';
 import ResMenu from './Components/RestaurantMenu';
 import Profile from './Components/Profile';
 import ProfileComponent from './Components/ProfileClass';
-import SampleUi from './Components/Abo';
 import Homepage from './Components/HomePage/HomePage';
+import Shrimmers from './Components/Shrimmer';
+import Instamart from './Components/instamart';
+// Lazy Load 
+const Instamart = lazy(()=>{
+    import("./Components/instamart");
+});
+
 const AppLayout = () =>{
     return (
         <div className='app'>
@@ -69,6 +75,10 @@ const appRoute = createBrowserRouter([
             {
                 path:'/Homepage',
                 element:<Homepage/>
+            },
+            {
+                path:'/Instamart',
+                element:<Suspense fallback={Shrimmers}><Instamart/></Suspense>
             }
            
         ]

@@ -10,8 +10,8 @@ const ResMenu = () =>{
     const paramss = useParams();
     console.log(paramss)
     const {id} = paramss;
-    // custom hooks (Restaurant)
-    const resdetail = useRestaurant(id);
+    // custom hooks (Restaurant) 
+     const resdetail = useRestaurant(id);
      return  !resdetail? (<Shrimmers/>): (
         <div>
            <h1>{resdetail.name}</h1>

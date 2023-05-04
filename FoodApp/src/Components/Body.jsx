@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import axios from "axios";
 import Shrimmer from "./Shrimmer";
 import { Link } from "react-router-dom";
+import useOnline from "../helper/useOnline";
+import NetworkChecker from "./InternetHandler";
   
 const Body = () =>{
    // avoid rendering a component
@@ -27,6 +29,12 @@ const Body = () =>{
          console.log(cardmap);
         setrestaurant(cardmap);
  }
+
+  const isOnline = useOnline();
+ /// check the internet connection.
+  if(!isOnline){
+    return (<NetworkChecker/>);
+  }
 
  //early return | don't render component
 //  if(!listOfrestaurant) return <h1>Empty</h1>;
@@ -57,4 +65,5 @@ const Body = () =>{
        </div>
     );
 }
-export default Body;
+
+export default Body;       
