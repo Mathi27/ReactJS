@@ -1,6 +1,7 @@
 import React from "react";
 
 const Instamart = () =>{
+    
     return (
         <>
             <h1>Instamart Module</h1>

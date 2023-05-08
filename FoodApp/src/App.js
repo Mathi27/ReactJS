@@ -15,7 +15,17 @@ import ProfileComponent from './Components/ProfileClass';
 import Homepage from './Components/HomePage/HomePage';
 import Shrimmers from './Components/Shrimmer';
 import Instamart from './Components/instamart';
-// Lazy Load 
+import PocMemo from './Components/Memo';
+//__________________
+// On demand loading 
+// Code Splitting 
+// Bundle Chunkking
+// Dynamic Import 
+// Chunking 
+// Lazy Loading
+// Dynamic Bundling
+//_________________
+
 const Instamart = lazy(()=>{
     import("./Components/instamart");
 });
@@ -29,6 +39,7 @@ const AppLayout = () =>{
         </div>
     )
 }
+ 
 
 const appRoute = createBrowserRouter([
     {
@@ -71,7 +82,6 @@ const appRoute = createBrowserRouter([
                 path:'/profilecp',
                 element:<ProfileComponent/>
             },
-        
             {
                 path:'/Homepage',
                 element:<Homepage/>
@@ -79,11 +89,13 @@ const appRoute = createBrowserRouter([
             {
                 path:'/Instamart',
                 element:<Suspense fallback={Shrimmers}><Instamart/></Suspense>
+            },
+            {
+                path:'/memo',
+                element:<PocMemo/>
             }
-           
-        ]
+        ],
     },
-   
 ])
 
 // const reactElement = React.createElement(AppLayout);
