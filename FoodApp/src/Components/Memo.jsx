@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState,useMemo } from 'react';
 
-
 const PocMemo = () =>{
  const [number , setNumber ]= useState(0);
  const [dark , setDark] = useState(false);
@@ -17,13 +16,6 @@ const themeStyles = {
     color: dark ? 'white':'black'
 }
 
- 
-/* if(isNaN(doubleNumber)){
-    return (
-        alert("It is not a number") 
-    )
-} */
-
 return (
     <>  
       
@@ -34,7 +26,7 @@ return (
             setNumber(parseInt(e.target.value))
         }
         }/>
-        
+
         <button onClick={()=> setDark(prevDark => !prevDark)}> Change Theme </button>
         <div style={themeStyles}>{number?doubleNumber:"Dont Leave it Blank"}</div>
     </>
