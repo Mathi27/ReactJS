@@ -40,7 +40,7 @@ const AppLayout = () =>{
     )
 }
  
-
+/// App Routes
 const appRoute = createBrowserRouter([
     {
         path:'/',

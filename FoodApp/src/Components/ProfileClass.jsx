@@ -11,6 +11,7 @@ class ProfileComponent extends React.Component{
         console.log("child- constructor "+this.props.name);
     
     }
+
     componentDidMount(){
         console.log("Child- component did mount."+this.props.name)
     }

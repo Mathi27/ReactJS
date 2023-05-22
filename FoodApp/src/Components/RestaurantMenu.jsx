@@ -14,8 +14,8 @@ const ResMenu = () =>{
      const resdetail = useRestaurant(id);
      return  !resdetail? (<Shrimmers/>): (
         <div>
-           <h1>{resdetail.name}</h1>
-           <img className="res-image" src={IMAGE_URL+resdetail.cloudinaryImageId} />
+           <h1 className="text-base font-semibold">{resdetail.name}</h1>
+           <img className="w-56 rounded-md p-2 bg-pink-100 " src={IMAGE_URL+resdetail.cloudinaryImageId} />
             <p>{"Cuisines : "+resdetail.cuisines}</p>
             <p>{"Location : "+resdetail.locality}</p>
             <p>{"Rating: "+resdetail.avgRatingString}</p>
