@@ -15,4 +15,5 @@ const RestroCard = (props) => {
         </div>
     );
 }
+// RestroCard UI
 export default RestroCard;

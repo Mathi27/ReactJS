@@ -1,14 +1,11 @@
 import React from 'react';
-import Style from './HomePage.module.css'
+import HomeHeader from './Headder';
 
 const Homepage = () => {
     return (
             <>
-                <div className={Style.parent}>
-                   <div className={Style.child}>
-                       
-                   </div>
-                </div>
+             {/* Header */}
+             <HomeHeader/>
             </>
     );
 }

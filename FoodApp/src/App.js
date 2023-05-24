@@ -39,8 +39,8 @@ const AppLayout = () =>{
         </div>
     )
 }
- 
-/// App Routes
+/// App Route
+
 const appRoute = createBrowserRouter([
     {
         path:'/',
@@ -64,7 +64,7 @@ const appRoute = createBrowserRouter([
             },
             {
                 path:'/home',
-                element: <Home/>
+                element: <Homepage/>
             },
             {
                 path:'/contact',

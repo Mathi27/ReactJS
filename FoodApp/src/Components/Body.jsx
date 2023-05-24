@@ -12,6 +12,7 @@ const Body = () =>{
   const [listOfrestaurant,setrestaurant]=useState(undefined);
   const [filteredRestaurant,setfilteredRestaurant] = useState([]);
     console.log("render")
+
   useEffect( () => {
     getSwiggyDetails();
   },[]);
@@ -28,6 +29,7 @@ const Body = () =>{
         let cardmap = CardData.map(elements =>  elements.data)
          console.log(cardmap);
         setrestaurant(cardmap);
+        
  }
 
   const isOnline = useOnline();
@@ -35,9 +37,7 @@ const Body = () =>{
   if(!isOnline){
     return (<NetworkChecker/>);
   }
-
- //early return | don't render component
-//  if(!listOfrestaurant) return <h1>Empty</h1>;
+ //  if(!listOfrestaurant) return <h1>Empty</h1>;
     return  (
        <div className='body'>
         <h5 className="p-2 flex justify-center">Sugar, spice, and everything nice</h5>
@@ -71,5 +71,6 @@ const Body = () =>{
        </div>
     );
 }
+
 
 export default Body;       
